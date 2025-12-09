@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>5th program</title>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+        }
+        body{
+            font-family: Arial;
+            display: flex;
+            flex-direction: column;
+        }
+    header{
+        display: flex;
+        margin-bottom: 20px;
+        background-color: rgb(12, 42, 140);
+        justify-content: space-between;
+        padding: 15px;
+        height: 30px;
+        align-items: center;
+        
+    }
+    header a{
+             color: white;
+    }
+    a{
+        text-decoration: none;
+   
+        margin-right: 15px;
+    }
+    .container{
+        display: flex;
+        justify-content: space-between;
+        padding: 12px;
+        margin: 2px;
+        border: 1px solid rgb(8, 8, 88);
+        border-radius: 20px;
+        gap: 20px;
+
+    }
+    .main-container{
+        flex: 1;
+        display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+   
+        
+    }
+    article{
+        margin: 2px;
+        padding: 15px;
+        border: 1px solid rgb(8, 8, 88);
+        border-radius: 20px;
+        flex: 1 1 300px;
+        
+    }
+    img{
+        height: 250px;
+        width: 100%;
+        object-fit: cover;
+    }
+    figure{
+        padding: 12px;
+        margin: 2px;
+        border: 1px solid rgb(8, 8, 88);
+        border-radius: 20px;
+        background-color: lightgray;
+        text-align: center;
+    }
+    aside {
+    position: sticky;
+    position: -webkit-sticky;
+    top: 100px;       /* You can adjust */
+    width: 250px;     /* Fixed width */
+    height: 80vh;    /* Fixed height */
+    border: 1px solid #ccc;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+}
+table{
+    width: 100%;
+    border-collapse: collapse;
+
+}
+th,tr,td{
+    border: 1px solid black;
+    padding: 3px;
+    text-align: center;
+        margin: 2px;
+    margin-right: 20px;
+
+}
+section{
+    padding: 20px;
+
+    
+}
+section h2{
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+footer{
+    background-color: rgb(8, 8, 88);
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <a href="#">Newspaper</a>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+            <a href="#">Services</a>
+            <a href="#">Marketing</a>
+            <a href="#">Updates</a>
+        </nav>
+    </header>
+    <div class="container">
+        <main class="main-container">
+            <article>
+                <h2>Article Title 1</h2>
+                <figure>
+                    <img src="https://www.shutterstock.com/image-photo/business-newspaper-isolated-on-white-600w-1272343108.jpg">
+                <figcaption>Image caption</figcaption>
+                </figure>
+                <p>This is the content of first article. here more details can be added</p>
+            </article>
+            <article>
+                <h2>Article Title 2</h2>
+                <figure>
+                    <img src="https://www.shutterstock.com/image-photo/business-newspaper-isolated-on-white-600w-1272343108.jpg">
+                <figcaption>Image caption</figcaption>
+                </figure>
+                <p>This is the content of first article. here more details can be added</p>
+            </article>
+            <article>
+                <h2>Article Title 3</h2>
+                <figure>
+                    <img src="https://www.shutterstock.com/image-photo/business-newspaper-isolated-on-white-600w-1272343108.jpg">
+                <figcaption>Image caption</figcaption>
+                </figure>
+                <p>This is the content of first article. here more details can be added</p>
+            </article>
+            <article>
+                <h2>Article Title 4</h2>
+                <figure>
+                    <img src="https://www.shutterstock.com/image-photo/business-newspaper-isolated-on-white-600w-1272343108.jpg">
+                <figcaption>Image caption</figcaption>
+                </figure>
+                <p>This is the content of first article. here more details can be added</p>
+            </article>
+            <article>
+                <h2>Article Title 5</h2>
+                <figure>
+                    <img src="https://www.shutterstock.com/image-photo/business-newspaper-isolated-on-white-600w-1272343108.jpg">
+                <figcaption>Image caption</figcaption>
+                </figure>
+                <p>This is the content of first article. here more details can be added</p>
+            </article>
+            <article>
+                <h2>Article Title 6</h2>
+                <figure>
+                    <img src="https://www.shutterstock.com/image-photo/business-newspaper-isolated-on-white-600w-1272343108.jpg">
+                <figcaption>Image caption</figcaption>
+                </figure>
+                <p>This is the content of first article. here more details can be added</p>
+            </article>
+            <article>
+                <h2>Article Title 7</h2>
+                <figure>
+                    <img src="https://www.shutterstock.com/image-photo/business-newspaper-isolated-on-white-600w-1272343108.jpg">
+                <figcaption>Image caption</figcaption>
+                </figure>
+                <p>This is the content of first article. here more details can be added</p>
+            </article>
+            <article>
+                <h2>Article Title 8</h2>
+                <figure>
+                    <img src="https://www.shutterstock.com/image-photo/business-newspaper-isolated-on-white-600w-1272343108.jpg">
+                <figcaption>Image caption</figcaption>
+                </figure>
+                <p>This is the content of first article. here more details can be added</p>
+            </article>
+        </main>
+        <aside class="related-news">
+            <h3>Related News</h3>
+            <ul>
+                <li><a href="#">Related News 1</a></li>
+                <li><a href="#">Related News 2</a></li>
+                <li><a href="#">Related News 3</a></li>
+            </ul>
+        </aside>
+    </div>
+    <section>
+        <h2>Recent Posts</h2>
+        <div>
+            <table>
+                <caption>List of Posts</caption>
+                <thead>
+                    <tr>
+                        <th>Post Title</th>
+                        <th>Date</th>
+                        <th>Author</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Post 1</td>
+                        <td>2024-08-30</td>
+                        <td>Author 1</td>
+                    </tr>
+                    <tr>
+                        <td>Post 1</td>
+                        <td>2024-08-30</td>
+                        <td>Author 1</td>
+                    </tr>
+                    <tr>
+                        <td>Post 1</td>
+                        <td>2024-08-30</td>
+                        <td>Author 1</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+    <footer>
+        <p>&copy 2025 Newspaper. All rights Reserved</p>
+    </footer>
+</body>
+</html>
