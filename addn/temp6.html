@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Calculator</title>
+
+    <style>
+        body{
+            font-family: Arial;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .calculator{
+            border: 1px solid #000;
+            padding: 20px;
+            width: 300px;
+            text-align: center;
+        }
+
+        input, select, button{
+            width: 100%;
+            padding: 8px;
+            margin: 8px 0;
+        }
+
+        #result{
+            margin-top: 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="calculator">
+    <h2>Simple Calculator</h2>
+
+    <input type="number" id="num1" placeholder="First number">
+    <input type="number" id="num2" placeholder="Second number">
+
+    <select id="op">
+        <option value="">Select Operation</option>
+        <option value="+">Addition</option>
+        <option value="-">Subtraction</option>
+        <option value="*">Multiplication</option>
+        <option value="/">Division</option>
+        <option value="%">Modulus</option>
+    </select>
+
+    <button onclick="calculate()">Calculate</button>
+
+    <div id="result"></div>
+</div>
+
+<script>
+function calculate(){
+    var a = Number(document.getElementById("num1").value);
+    var b = Number(document.getElementById("num2").value);
+    var op = document.getElementById("op").value;
+    var res;
+
+    if(op == "+") res = a + b;
+    else if(op == "-") res = a - b;
+    else if(op == "*") res = a * b;
+    else if(op == "/") res = (b == 0) ? "Cannot divide by zero" : a / b;
+    else if(op == "%") res = a % b;
+    else res = "Select operation";
+
+    document.getElementById("result").innerHTML = "Result: " + res;
+}
+</script>
+
+</body>
+</html>

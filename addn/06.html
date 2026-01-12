@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<head>
+    <title>Calculator</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container{
+            display: flex;
+            flex-direction: column;
+            border: 1px solid black;
+            padding: 20px;
+
+        }
+        input,select{
+            margin-bottom: 5px;
+        }
+        #result{
+            background-color: green;
+            color: white;
+            text-align: center;
+            margin-top: 2px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Simple Calculator</h2>
+        <input type="number" id="num1" placeholder="First Number">
+        <input type="number" id="num2" placeholder="Second Number">
+
+        <select id="op">
+            <option value="">Select Operation</option>
+            <option value="+">Addition</option>
+            <option value="-">Subtraction</option>
+            <option value="*">Product</option>
+            <option value="/">Division</option>
+            <option value="power">Power</option>
+            <option value="sq">Square</option>
+            <option value="sqrt">sqrt</option>
+        </select>
+        <button type="button" onclick="calculate()">Calculate</button>
+        <div id="result"></div>
+    </div>
+<script>
+    function calculate(){
+        var a=Number(document.getElementById('num1').value);
+        var b=Number(document.getElementById('num2').value);
+        var op = document.getElementById('op').value;
+        var r =''
+        if (op=='+') r=a+b;
+        else if(op=='-') r=a-b;
+        else if(op=='*') r=a*b;
+        else if(op=='/') r = (b==0)? "cannot divide by zero":a/b;
+        else if(op=='power') r= Math.pow(a,b);
+        else if(op=='sq') r=` sq of num1 is ${Math.pow(a,2)} and sq of num 2 is ${Math.pow(b,2)}`;
+        else if(op=='sqrt') r=`sqrt of num1 is ${Math.sqrt(a)} and sqrt of num 2 is ${Math.sqrt(b)}`;
+        else r= " Select an operation"    
+        document.getElementById('result').innerHTML = "Result: " + r;
+    }
+</script>
+</body>
+</html>

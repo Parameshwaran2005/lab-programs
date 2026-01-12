@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Newspaper Page</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+        }
+
+        header, footer {
+            background: #7b38f7;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .container {
+            display: flex;
+            padding: 20px;
+            gap: 20px;
+        }
+
+        main {
+            flex: 3;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 15px;
+        }
+
+        article {
+            background: white;
+            padding: 15px;
+            border-radius: 6px;
+        }
+
+        article img {
+            width: 100%;
+            border-radius: 6px;
+        }
+
+        aside {
+            flex: 1;
+            background: white;
+            padding: 15px;
+            border-radius: 6px;
+        }
+
+        aside h3 {
+            background: black;
+            color: white;
+            padding: 8px;
+            text-align: center;
+        }
+
+        aside a {
+            color: #7b38f7;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        section {
+            background: white;
+            margin: 20px;
+            padding: 20px;
+            border-radius: 6px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+
+        th {
+            background: #007bff;
+            color: white;
+        }
+
+
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Newspaper</h1>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+    </nav>
+</header>
+
+<div class="container">
+
+    <main>
+        <article>
+            <h3>Article 1</h3>
+            <img src="https://www.shutterstock.com/image-photo/business-newspaper-isolated-on-white-600nw-1272343108.jpg">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        </article>
+
+        <article>
+            <h3>Article 2</h3>
+            <img src="https://www.shutterstock.com/image-photo/business-newspaper-isolated-on-white-600nw-1272343108.jpg">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        </article>
+
+        <article>
+            <h3>Article 3</h3>
+            <img src="https://www.shutterstock.com/image-photo/business-newspaper-isolated-on-white-600nw-1272343108.jpg">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        </article>
+        <article>
+            <h3>Article 1</h3>
+            <img src="https://www.shutterstock.com/image-photo/business-newspaper-isolated-on-white-600nw-1272343108.jpg">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        </article>
+
+        <article>
+            <h3>Article 2</h3>
+            <img src="https://www.shutterstock.com/image-photo/business-newspaper-isolated-on-white-600nw-1272343108.jpg">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        </article>
+
+        <article>
+            <h3>Article 3</h3>
+            <img src="https://www.shutterstock.com/image-photo/business-newspaper-isolated-on-white-600nw-1272343108.jpg">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        </article>
+    </main>
+
+    <aside>
+        <h3>Related News</h3>
+        <ul>
+            <li><a href="#">News 1</a></li>
+            <li><a href="#">News 2</a></li>
+            <li><a href="#">News 3</a></li>
+        </ul>
+    </aside>
+
+</div>
+
+<section>
+    <h2>Recent Posts</h2>
+    <table>
+        <tr>
+            <th>Title</th>
+            <th>Date</th>
+            <th>Author</th>
+        </tr>
+        <tr>
+            <td>Post 1</td>
+            <td>2024-08-30</td>
+            <td>Author 1</td>
+        </tr>
+        <tr>
+            <td>Post 2</td>
+            <td>2024-08-29</td>
+            <td>Author 2</td>
+        </tr>
+    </table>
+</section>
+
+<footer>
+    © 2024 Newspaper
+</footer>
+
+</body>
+</html>
