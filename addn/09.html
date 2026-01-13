@@ -1,0 +1,43 @@
+<!Doctype html>
+<head>
+    <title>Animations</title>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<style>
+#box{
+    width: 100px;
+    height: 100px;
+    background-color: lightblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+</style>
+</head>
+<body>
+
+        <p id="p">This is paragraph text</p>
+        <ul id="list">
+            <li>Append item </li>
+        </ul>
+
+    <div id="box">
+        Animate me
+    </div>
+    <button id="add">Append</button>
+    <button id="move">Animate</button>
+<script>
+    $(function(){
+        $("#add").click(function(){
+            $("#p").append("Added Text");
+            $("#list").append("<li>New item</li>");
+        });
+        $("#move").click(function(){
+            $("#box")
+            .css("background","green")
+            .animate({width:"200px",height:"200px"},500);
+        });
+    });
+</script>
+
+</body>
+</html>

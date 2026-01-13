@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>AJAX</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<body>
+
+<h3>AJAX Examples</h3>
+
+<button onclick="plainAjax()">Plain AJAX</button>
+<button onclick="jqueryAjax()">jQuery AJAX</button>
+<button onclick="jqueryJSON()">getJSON</button>
+<button onclick="parseJSON()">Parse JSON</button>
+
+<pre id="output"></pre>
+
+<script>
+function plainAjax(){
+    var x = new XMLHttpRequest();
+    x.open("GET","textfile.txt",true);
+    x.onload = function(){
+        output.innerText = x.responseText;
+    };
+    x.send();
+}
+
+function jqueryAjax(){
+    $.ajax({
+        url:"textfile.txt",
+        success:function(data){
+            output.innerText = data;
+        }
+    });
+}
+
+function jqueryJSON(){
+    $.getJSON("data.json",function(data){
+        output.innerText = JSON.stringify(data,null,2);
+    });
+}
+
+function parseJSON(){
+    $.get("data.json",function(data){
+        output.innerText =
+            JSON.stringify(typeof data=="string"?JSON.parse(data):data,null,2);
+    });
+}
+</script>
+
+</body>
+</html>

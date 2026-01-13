@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>jQuery Example</title>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<style>
+#box{width:100px;height:100px;background:blue;color:white;text-align:center}
+</style>
+</head>
+
+<body>
+
+<p id="p">This is a paragraph</p>
+<ul id="list">
+<li>Item 1</li>
+</ul>
+
+<div id="box">Box</div>
+
+<button id="add">Append</button>
+<button id="move">Animate</button>
+
+<script>
+$(function(){
+
+$("#add").click(function(){
+    $("#p").append(" Added text");
+    $("#list").append("<li>New Item</li>");
+});
+
+$("#move").click(function(){
+    $("#box").animate({width:"200px",height:"200px"},500);
+});
+
+});
+</script>
+
+</body>
+</html>
