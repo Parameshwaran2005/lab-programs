@@ -5,3 +5,5 @@
 ### It will be a practice repository
 
 - it will begin from html and all the way goes upto js and jquery for now
+
+## also it will have ml lab programs

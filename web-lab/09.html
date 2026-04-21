@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>9th program</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container{
+        justify-content: center;  
+        border: 1px solid black;
+        padding: 5px;
+        border-radius: 20px;
+        }
+        #box{
+            border: 1px solid black;
+            width: 100px;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: lightblue;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p id="paragraph">This is existing paragraph.</p>
+        <ul id="list">
+            <li>List item 1</li>
+            <li>List item 2</li>
+        </ul>
+        <center>
+        <div class="box" id="box">Animate me!</div>
+        </center>
+        <button id="appendbtn">Append Content</button>
+        <button id="animateButton">Animate me</button>
+    </div>
+    <script>
+        $('#appendbtn').click(function (){
+            $("#paragraph").append(" Appended text. ");
+            $("#list").append("<li>New appended list item</li> ");
+        });
+        $("#animateButton").click(function (){
+            $('#box').stop(true,true).css({
+                width: "100px",
+                height: "100px",
+                opacity: 1,
+                backgroundColor: "blue"
+            }).animate({
+                width: "200px",
+                height: "200px",
+                opacity: 0.5
+            },1000,function(){
+                $(this).css("background-color","green")
+            });
+        });
+    </script>
+</body>
+</html>

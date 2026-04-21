@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<head>
+    <title>
+        Second Program
+    </title>
+<style>
+table{
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+th,td{
+    background-color: lightgrey;
+    border: 1px solid black;
+    padding: 8px;
+    text-align: center;
+    vertical-align: middle;
+}
+.color1{
+    background-color: lightblue;
+}
+.color2{
+    background-color: lightpink;
+}
+.color3{
+    background-color: lightyellow;
+}
+.color4{
+    background-color: lightgreen;
+}
+.breakcolor{
+    background-color: lightcyan;
+}
+</style>
+</head>
+
+<body>
+<h1 align="center">Time Table</h1>
+<table>
+<thead>
+    <tr>
+    <th>Days/Time</th>
+    <th>9:00 - 10:00</th>
+    <th>10:00 - 11:00</th>
+    <th>11:00 - 11:20</th>
+    <th>11:20 - 12:10</th>
+    <th>12:10 - 1:10</th>
+    <th>1:10 - 2:10</th>
+    <th>2:10 - 3:10</th>
+    <th>3:10 - 4:00</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+    <td>Monday</td>
+    <td>TOC</td>
+    <td>SE</td>
+    <td rowspan="6" class="breakcolor">Tea Break</td>
+    <td>AI</td>
+    <td>CN</td>
+    <td rowspan="6" class="breakcolor">Lunch Break</td>
+    <td colspan="2">Mini project</td>
+</tr>
+<tr>
+    <td>Tuesday</td>
+    <td class="color4">CN</td>
+    <td>AI</td>
+    <td>SE</td>
+    <td>TOC</td>
+    <td colspan="2" class="color1">AWS</td>
+</tr>
+<tr>
+    <td>Wednesday</td>
+    <td>AI</td>
+    <td class="color2">CN</td>
+    <td>TOC</td>
+    <td>RM</td>
+    <td colspan="2" class="color3">CN Lab</td>
+</tr>
+<tr>
+    <td>Thursday</td>
+    <td>TOC</td>
+    <td>SE</td>
+    <td>AI</td>
+    <td>TOC</td>
+    <td colspan="2">-</td>
+</tr>
+<tr>
+    <td>Friday</td>
+    <td>TOC</td>
+    <td>SE</td>
+    <td>AI</td>
+    <td>CN</td>
+    <td colspan="2" class="color2">Web Technology Lab</td>
+</tr>
+</tbody>
+<tfoot>
+    <tr>
+        <td colspan="9">
+            End Of Time Table
+        </td>
+    </tr>
+</tfoot>
+
+</table>
+
+</body>
+</html>

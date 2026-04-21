@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Simple Calculator</title>
+<style>
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    h2{
+        background-color: black;
+        color:white;
+        text-align: center;
+        padding: 12px;
+        border-radius: 12px;
+    }
+    .container{
+        margin: 20x;
+        padding: 20px;
+        border: 1px solid black;
+        border-radius: 20px;
+    }
+    form{
+        display: flex;
+        flex-direction: column;
+    }
+    input,select,button{
+        margin: 12px;
+    }
+    #result {
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 18px;
+    border-radius: 8px;
+}
+
+</style>
+</head>
+
+<body>
+    <div class="container">
+    <h2>Simple Calculator</h2>
+    <form id="calculator-form">
+        <input type="number" id="num1" placeholder="Enter 1st no " required>
+        <input type="number" id="num2" placeholder="Enter 2nd no " required>
+        <select id="operation" required>
+            <option value="">Select Operation</option>
+            <option value="sum">sum</option>
+            <option value="difference">difference</option>
+            <option value="product">product</option>
+            <option value="remainder">remainder</option>
+            <option value="quotient">quotient</option>
+            <option value="power">power</option>
+            <option value="sqrt">sqrt</option>
+            <option value="square">square</option>
+        </select>
+        <button type="button" onclick="calculate()">Calculate</button>
+    </form>
+    <div id="result"></div>
+    </div>
+    <script>
+        function calculate(){
+            const num1 = parseFloat(document.getElementById('num1').value);
+            const num2 = parseFloat(document.getElementById('num2').value);
+            const operation = document.getElementById('operation').value;
+            let result ='';
+            let resultclass = "success";
+            if(isNaN(num1) && isNaN(num2)){
+                result = 'Please Enter Valid Number';
+                resultclass = 'error'
+            }else{
+                switch(operation){
+                    case 'sum':
+                        result = `Sum: ${num1 + num2}`;
+                        break;
+                    case 'difference':
+                        result = `Difference: ${num1 - num2}`;
+                        break;
+                    case 'product':
+                        result = `Product: ${num1 * num2}`;
+                        break;
+                    case 'remainder':
+                        result = `Remainder: ${num1 %num2}`;
+                    case 'quotient':
+                        if(num2==0){
+                            result = 'Cannot divide by zero';
+                            resultclass = 'error';
+                        }else{
+                            result = `Quotient: ${num1/num2}`;
+                            break;
+                        }
+                    case 'power':
+                        result = `Power: ${Math.pow(num1,num2)}`;
+                        break;
+                    case 'sqrt':
+                        result = `Square root of ${num1}: ${Math.sqrt(num1)} <br> Square root of ${num2}: ${Math.sqrt(num2)}`;
+                        break;
+                    case 'square':
+                        result = `Square of ${num1}: ${Math.pow(num1,2)} <br> Square of ${num2}: ${Math.pow(num2,2)}`;
+                        break;
+                    default:
+                        result= "Please select an operation";
+                        resultclass = 'error';
+                }
+            }
+
+            const resultDiv = document.getElementById('result');
+            resultDiv.innerHTML = result;
+        }
+    </script>
+</body>
+</html>
